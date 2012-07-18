@@ -1,0 +1,5 @@
+1342584509
+Application	C:/Sites/BlackJack/config/application.rb	  class Application 
+ApplicationController	C:/Sites/BlackJack/app/controllers/application_controller.rb	class ApplicationController 
+ApplicationHelper	C:/Sites/BlackJack/app/helpers/application_helper.rb	module ApplicationHelper
+BlackJack	C:/Sites/BlackJack/config/application.rb	module BlackJack
