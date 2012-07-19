@@ -1,5 +1,24 @@
-1342585721
+1342700276
 Application	C:/Sites/BlackJack/config/application.rb	  class Application 
 ApplicationController	C:/Sites/BlackJack/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	C:/Sites/BlackJack/app/helpers/application_helper.rb	module ApplicationHelper
 BlackJack	C:/Sites/BlackJack/config/application.rb	module BlackJack
+CreateUsers	C:/Sites/BlackJack/db/migrate/20120719054057_create_users.rb	class CreateUsers 
+User	C:/Sites/BlackJack/app/models/user.rb	class User 
+UsersController	C:/Sites/BlackJack/app/controllers/users_controller.rb	class UsersController 
+UsersHelper	C:/Sites/BlackJack/app/helpers/users_helper.rb	module UsersHelper
+change	C:/Sites/BlackJack/db/migrate/20120719054057_create_users.rb	  def change
+create	C:/Sites/BlackJack/app/controllers/users_controller.rb	  def create
+create_remember_token	C:/Sites/BlackJack/app/models/user.rb	  def create_remember_token
+new	C:/Sites/BlackJack/app/controllers/users_controller.rb	  def new
+remember token	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "remember token" do
+return value of authenticate method	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "return value of authenticate method" do
+when name already exists	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when name already exists" do
+when name is too long	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when name is too long" do
+when no name is entered	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when no name is entered" do
+when password confirmation is nil	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when password confirmation is nil" do
+when password doesn't match confirmation	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when password doesn't match confirmation" do
+with a password that's too short	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with a password that's too short" do
+with invalid password	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with invalid password" do
+with no password entered	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with no password entered" do
+with valid password	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with valid password" do

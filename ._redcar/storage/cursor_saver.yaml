@@ -1,4 +1,12 @@
 --- 
-cursor_positions: []
-
+cursor_positions: 
+  - :path: Gemfile
+    :cursor_offset: 658
+    :timestamp: 2012-07-18 16:18:53.642000 +12:00
+  - :path: db/migrate/20120719054057_create_users.rb
+    :cursor_offset: 182
+    :timestamp: 2012-07-19 20:44:21.132000 +12:00
+  - :path: README.rdoc
+    :cursor_offset: 147
+    :timestamp: 2012-07-19 11:01:00.442000 +12:00
 files_to_retain: 0
