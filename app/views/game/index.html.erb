@@ -1,0 +1,22 @@
+<div id="wrapper">
+<div id="mainbox">
+  <div id="spacer">Player:<%= current_user.name %> Current Bankroll:<%= current_user.bankroll %></div>
+  <div id="dealer">
+    <div id="dscore"> </div>
+      <%= image_tag "cards/back.png"  %>&nbsp
+      <%= image_tag "cards/back.png"  %>
+    </div>
+  <div id="result">
+     <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+  </div>
+  <div id="player">
+    <%= image_tag "cards/back.png"  %>&nbsp
+    <%= image_tag "cards/back.png"  %> 
+  </div>
+  <div id="buttons">
+    <%= button_to "DEAL", { :controller => 'game', :action => 'deal' }, :remote => true, :class => 'btn btn-large btn-primary' %>  
+  </div>
+</div>
+</div>

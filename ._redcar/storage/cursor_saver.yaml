@@ -1,12 +1,95 @@
 --- 
 cursor_positions: 
-  - :path: Gemfile
-    :cursor_offset: 658
-    :timestamp: 2012-07-18 16:18:53.642000 +12:00
   - :path: db/migrate/20120719054057_create_users.rb
     :cursor_offset: 182
     :timestamp: 2012-07-19 20:44:21.132000 +12:00
+  - :path: app/shared/_error_messages.html.erb
+    :cursor_offset: 317
+    :timestamp: 2012-07-20 11:35:13.885000 +12:00
   - :path: README.rdoc
-    :cursor_offset: 147
-    :timestamp: 2012-07-19 11:01:00.442000 +12:00
+    :cursor_offset: 0
+    :timestamp: 2012-07-20 00:23:38.265000 +12:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 105
+    :timestamp: 2012-07-20 21:09:47.494000 +12:00
+  - :path: app/helpers/users_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-07-20 00:23:38.273000 +12:00
+  - :path: Gemfile
+    :cursor_offset: 353
+    :timestamp: 2012-07-21 12:42:18.371000 +12:00
+  - :path: spec/factories.rb
+    :cursor_offset: 155
+    :timestamp: 2012-07-21 12:50:13.865000 +12:00
+  - :path: spec/requests/sign_ups_spec.rb
+    :cursor_offset: 134
+    :timestamp: 2012-07-20 16:50:18.798000 +12:00
+    :selection_offset: 201
+    :block_selection_mode: false
+  - :path: app/helpers/sessions_helper.rb
+    :cursor_offset: 455
+    :timestamp: 2012-07-20 19:35:41.218000 +12:00
+  - :path: spec/models/card_spec.rb
+    :cursor_offset: 416
+    :timestamp: 2012-07-22 22:13:44.001000 +12:00
+  - :path: app/assets/stylesheets/sessions.css.scss
+    :cursor_offset: 0
+    :timestamp: 2012-07-20 18:31:43.598000 +12:00
+  - :path: app/views/game/deal.js.erb
+    :cursor_offset: 324
+    :timestamp: 2012-07-24 11:51:44.371000 +12:00
+  - :path: app/assets/stylesheets/users.css.scss
+    :cursor_offset: 0
+    :timestamp: 2012-07-20 12:07:24.060000 +12:00
+  - :path: app/views/users/new.html.erb
+    :cursor_offset: 40
+    :timestamp: 2012-07-20 12:07:28.933000 +12:00
+    :selection_offset: 26
+    :block_selection_mode: false
+  - :path: app/assets/stylesheets/game.css.scss
+    :cursor_offset: 13
+    :timestamp: 2012-07-23 21:10:23.298000 +12:00
+  - :path: app/views/game/index.html.erb
+    :cursor_offset: 131
+    :timestamp: 2012-07-24 11:38:06.116000 +12:00
+  - :path: app/views/sessions/new.html.erb
+    :cursor_offset: 40
+    :timestamp: 2012-07-23 21:05:22.661000 +12:00
+  - :path: app/controllers/sessions_controller.rb
+    :cursor_offset: 199
+    :timestamp: 2012-07-23 18:32:19.220000 +12:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 200
+    :timestamp: 2012-07-20 16:33:04.916000 +12:00
+    :selection_offset: 173
+    :block_selection_mode: false
+  - :path: app/controllers/game_controller.rb
+    :cursor_offset: 1012
+    :timestamp: 2012-07-23 22:41:25.690000 +12:00
+  - :path: app/models/card.rb
+    :cursor_offset: 520
+    :timestamp: 2012-07-23 14:02:48.036000 +12:00
+  - :path: config/routes.rb
+    :cursor_offset: 37
+    :timestamp: 2012-07-23 20:42:59.974000 +12:00
+  - :path: app/views/game/_results.html.erb
+    :cursor_offset: 33
+    :timestamp: 2012-07-23 22:01:34.784000 +12:00
+  - :path: app/views/game/_players_cards.html.erb
+    :cursor_offset: 179
+    :timestamp: 2012-07-24 11:42:27.011000 +12:00
+  - :path: app/views/game/_dealers_initial.html.erb
+    :cursor_offset: 215
+    :timestamp: 2012-07-24 11:43:56.522000 +12:00
+  - :path: spec/models/hand_spec.rb
+    :cursor_offset: 516
+    :timestamp: 2012-07-24 15:27:45.651000 +12:00
+  - :path: spec/models/user_spec.rb
+    :cursor_offset: 170
+    :timestamp: 2012-07-20 09:24:54.149000 +12:00
+    :selection_offset: 201
+    :block_selection_mode: false
+  - :path: app/models/hand.rb
+    :cursor_offset: 703
+    :timestamp: 2012-07-23 14:03:12.491000 +12:00
 files_to_retain: 0

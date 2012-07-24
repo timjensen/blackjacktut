@@ -1,24 +1,74 @@
-1342700276
+1343122044
 Application	C:/Sites/BlackJack/config/application.rb	  class Application 
 ApplicationController	C:/Sites/BlackJack/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	C:/Sites/BlackJack/app/helpers/application_helper.rb	module ApplicationHelper
 BlackJack	C:/Sites/BlackJack/config/application.rb	module BlackJack
+Card	C:/Sites/BlackJack/app/models/card.rb	class Card
 CreateUsers	C:/Sites/BlackJack/db/migrate/20120719054057_create_users.rb	class CreateUsers 
+GameController	C:/Sites/BlackJack/app/controllers/game_controller.rb	class GameController 
+GameHelper	C:/Sites/BlackJack/app/helpers/game_helper.rb	module GameHelper
+Hand	C:/Sites/BlackJack/app/models/hand.rb	class Hand
+SessionsController	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	class SessionsController 
+SessionsHelper	C:/Sites/BlackJack/app/helpers/sessions_helper.rb	module SessionsHelper
+SignUp	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "SignUp" do
 User	C:/Sites/BlackJack/app/models/user.rb	class User 
+UserLogins	C:/Sites/BlackJack/spec/requests/user_logins_spec.rb	describe "UserLogins" do
 UsersController	C:/Sites/BlackJack/app/controllers/users_controller.rb	class UsersController 
 UsersHelper	C:/Sites/BlackJack/app/helpers/users_helper.rb	module UsersHelper
+after cards have been shuffled	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "after cards have been shuffled" do
+build a hand	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "build a hand" do
+card_front	C:/Sites/BlackJack/app/models/card.rb	  attr_reader :card_front
+cards	C:/Sites/BlackJack/app/models/hand.rb	  attr_accessor :cards, :score
 change	C:/Sites/BlackJack/db/migrate/20120719054057_create_users.rb	  def change
+check_for_bj	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def check_for_bj
+concats two strings with spaces	C:/Sites/BlackJack/spec/helpers/game_helper_spec.rb	it "concats two strings with spaces" do
 create	C:/Sites/BlackJack/app/controllers/users_controller.rb	  def create
+create	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	  def create
 create_remember_token	C:/Sites/BlackJack/app/models/user.rb	  def create_remember_token
+current_user	C:/Sites/BlackJack/app/helpers/sessions_helper.rb	  def current_user
+current_user=	C:/Sites/BlackJack/app/helpers/sessions_helper.rb	  def current_user=(user)
+deal	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def deal
+deduction	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def deduction
+destroy	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	  def destroy
+got_the_dollars?	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def got_the_dollars?
+index	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def index
+initial card array should be empty	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "initial card array should be empty" do
+initial score should be zero	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "initial score should be zero" do
+initialize	C:/Sites/BlackJack/app/models/card.rb	  def initialize
+initialize	C:/Sites/BlackJack/app/models/hand.rb	  def initialize
+login page	C:/Sites/BlackJack/spec/requests/user_logins_spec.rb	describe "login page" do
 new	C:/Sites/BlackJack/app/controllers/users_controller.rb	  def new
+new	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	  def new
+new card dealt	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "new card dealt" do
 remember token	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "remember token" do
 return value of authenticate method	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "return value of authenticate method" do
+score	C:/Sites/BlackJack/app/models/hand.rb	  attr_accessor :cards, :score
+score a hand	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "score a hand" do
+score_of	C:/Sites/BlackJack/app/models/hand.rb	  def self.score_of(hand)
+should create a user	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	it "should create a user" do
+should not create a user	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	it "should not create a user" do
+shuffle	C:/Sites/BlackJack/app/models/card.rb	  def self.shuffle
+sign_in	C:/Sites/BlackJack/app/helpers/sessions_helper.rb	  def sign_in(user)
+signin	C:/Sites/BlackJack/spec/requests/user_logins_spec.rb	describe "signin" do
+signup	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "signup" do
+signup page	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "signup page" do
+string concat	C:/Sites/BlackJack/spec/helpers/game_helper_spec.rb	describe "string concat" do
+user_from_remember_token	C:/Sites/BlackJack/app/helpers/sessions_helper.rb	    def user_from_remember_token
+value	C:/Sites/BlackJack/app/models/card.rb	  def self.value(card_front, score)
+value of a high ace	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "value of a high ace" do
+value of a low ace	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "value of a low ace" do
+value of a number card	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "value of a number card" do
+value of any other cards	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "value of any other cards" do
 when name already exists	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when name already exists" do
 when name is too long	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when name is too long" do
 when no name is entered	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when no name is entered" do
 when password confirmation is nil	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when password confirmation is nil" do
 when password doesn't match confirmation	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "when password doesn't match confirmation" do
 with a password that's too short	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with a password that's too short" do
+with invalid information	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "with invalid information" do
+with invalid information	C:/Sites/BlackJack/spec/requests/user_logins_spec.rb	describe "with invalid information" do
 with invalid password	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with invalid password" do
 with no password entered	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with no password entered" do
+with valid information	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "with valid information" do
+with valid information	C:/Sites/BlackJack/spec/requests/user_logins_spec.rb	describe "with valid information" do
 with valid password	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "with valid password" do

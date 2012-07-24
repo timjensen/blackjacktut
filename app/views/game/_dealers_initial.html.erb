@@ -1,0 +1,5 @@
+<div id="dscore">
+<%= label :dealers_score, "Dealers Score:#{session[:dealer_hand].score}" %>
+</div>
+<%= image_tag "cards/#{session[:dealer_hand].cards[0].card_front}.png"  %>&nbsp
+<%= image_tag "cards/back.png"  %>

@@ -1,7 +1,11 @@
 BlackJack::Application.routes.draw do
-  get "users/new"
-
-  get "users/create"
+  
+  resources :users, :sessions, :games
+  root :to => 'sessions#new'
+  match '/signup',  to: 'users#new'
+  match '/login', to: 'sessions#new'
+  match "/blackjack", to: 'game#index'
+  post 'game/deal'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

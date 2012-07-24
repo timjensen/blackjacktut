@@ -1,0 +1,4 @@
+<% for card in session[:player_hand].cards %>
+<%= image_tag "cards/#{card.card_front}.png"  %>
+<% end %>
+<%= label :players_hand,"Players Score: #{session[:player_hand].score}" %>
