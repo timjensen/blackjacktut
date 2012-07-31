@@ -2,13 +2,13 @@ class GameController < ApplicationController
   
   def index
     # Set default bet amount
-    session[:bet] = "25";
+    session[:bet] = "100";
   end
   
   def deal
     # Check if player has enough money in there bankroll
     if got_the_dollars?
-      
+      # Set gamestate
       session[:gamestate] = "Dealt"
       # Deducted wager from bankroll as soon as deal
       deduction
@@ -33,22 +33,41 @@ class GameController < ApplicationController
       check_for_bj
     else
       flash.now[:error] = "You're Broke Fool"
+    end
   end
-end
-def hit
+  
+  def hit
     # Produces next card and adds it to players hand
     next_card
     # Set third (removes double button)
     session[:gamestate] = "Third"
     # Check player has not gone bust
     check_if_bust
-end
+  end
 
-def stay
-end
+  def stay
+    dealer_ftw
+    # Calculate winner
+    find_winner
+  end
 
-def double
-end
+  def double
+    if got_the_dollars?
+      deduction
+      session[:bet] = session[:bet].to_f * 2
+      next_card
+      # Check if player has hone bust
+      check_if_bust
+      if session[:gamestate] != "Over"
+        dealer_ftw
+        # Calculate winner
+        find_winner
+      end
+      session[:bet] = session[:bet].to_f / 2
+    else
+      flash.now[:error] = "You're Broke Fool"
+    end
+  end
   
   private
   
@@ -75,7 +94,7 @@ end
       dollars = session[:user].bankroll.to_f
       # Set result variables 
       flash.now[:success] = "Congratulations You Hit BlackJack!!"
-      
+      # Set gamestate
       session[:gamestate] = "Over"
       # Sets chippy variable to unlock betting
       dollars += (bet * 3.5)
@@ -100,11 +119,52 @@ end
   end
   
   def check_if_bust
+    # If statement to check for blackjack
     if (session[:player_hand].score > 21)
-    # Set variables
+    # Set flash error
     flash.now[:error] = "You Have Gone Bust"
+    # Set gamestate
     session[:gamestate] = "Over"
+    end
   end
+  
+  def find_winner
+     # Set users score variable using session
+    score = session[:player_hand].score
+    # Set dealers score variable using session
+    d_score = session[:dealer_hand].score
+    # Set bet variable using session
+    bet = session[:bet].to_f
+    # Set dollars variable using users bankroll
+    dollars = session[:user].bankroll.to_f
+    # If score is greater than 21   
+    if (score > 21)
+      flash.now[:error] = "Dealer Wins"
+    # If users score matches dealers score
+    elsif (score == d_score)
+      flash.now[:success]  = "Push"
+      dollars += bet
+    # If delaers score is greater than 21 or users score is greater than dealers score
+    elsif (d_score > 21 or (score > d_score))
+      flash.now[:success]  = "You Win!"
+      dollars += (bet * 2)
+    else
+      flash.now[:error] = "Dealer Wins"
+    end
+    session[:gamestate] = "Over"
+    session[:user].bankroll = dollars
+    session[:user].save
+  end
+  
+  def dealer_ftw
+     # Get session hand
+      dhand = session[:dealer_hand]
+     # Add new cards to dealers hand untill dealers score exceeds 16
+      dhand.cards << Card.new while(Hand.score_of(dhand) < 17)
+     # Update dealers hand score    
+      dhand.score = Hand.score_of(dhand)
+      # Update session variable
+      session[:dealer_hand] = dhand
   end
   
 end

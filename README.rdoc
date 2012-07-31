@@ -1,5 +1,5 @@
 == Ruby On Rails Tutorial: BlackJack Application
 
-This is a simple BlackJack application for the 
+This is the complete source code for the 
 -Ruby On Rails Tutorial: BlackJack Application (website still in production).
 -Written by Tim Jensen (timdavidjensen@gmail.com).

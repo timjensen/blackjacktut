@@ -1,4 +1,4 @@
-1343708280
+1343732253
 Application	C:/Sites/BlackJack/config/application.rb	  class Application 
 ApplicationController	C:/Sites/BlackJack/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	C:/Sites/BlackJack/app/helpers/application_helper.rb	module ApplicationHelper
@@ -27,11 +27,13 @@ create	C:/Sites/BlackJack/app/controllers/users_controller.rb	  def create
 create	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	  def create
 create_remember_token	C:/Sites/BlackJack/app/models/user.rb	  def create_remember_token
 deal	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def deal
+dealer_ftw	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def dealer_ftw
 deduction	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def deduction
 destroy	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	  def destroy
-double	C:/Sites/BlackJack/app/controllers/game_controller.rb	def double
+double	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def double
+find_winner	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def find_winner
 got_the_dollars?	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def got_the_dollars?
-hit	C:/Sites/BlackJack/app/controllers/game_controller.rb	def hit
+hit	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def hit
 index	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def index
 initial card array should be empty	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "initial card array should be empty" do
 initial score should be zero	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "initial score should be zero" do
@@ -42,7 +44,6 @@ new	C:/Sites/BlackJack/app/controllers/users_controller.rb	  def new
 new	C:/Sites/BlackJack/app/controllers/sessions_controller.rb	  def new
 new card dealt	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "new card dealt" do
 next_card	C:/Sites/BlackJack/app/controllers/game_controller.rb	   def next_card
-remember token	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "remember token" do
 return value of authenticate method	C:/Sites/BlackJack/spec/models/user_spec.rb	describe "return value of authenticate method" do
 score	C:/Sites/BlackJack/app/models/hand.rb	  attr_accessor :cards, :score
 score a hand	C:/Sites/BlackJack/spec/models/hand_spec.rb	describe "score a hand" do
@@ -53,7 +54,7 @@ shuffle	C:/Sites/BlackJack/app/models/card.rb	  def self.shuffle
 signin	C:/Sites/BlackJack/spec/requests/user_logins_spec.rb	describe "signin" do
 signup	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "signup" do
 signup page	C:/Sites/BlackJack/spec/requests/sign_ups_spec.rb	describe "signup page" do
-stay	C:/Sites/BlackJack/app/controllers/game_controller.rb	def stay
+stay	C:/Sites/BlackJack/app/controllers/game_controller.rb	  def stay
 string concat	C:/Sites/BlackJack/spec/helpers/game_helper_spec.rb	describe "string concat" do
 value	C:/Sites/BlackJack/app/models/card.rb	  def self.value(card_front, score)
 value of a high ace	C:/Sites/BlackJack/spec/models/card_spec.rb	describe "value of a high ace" do
