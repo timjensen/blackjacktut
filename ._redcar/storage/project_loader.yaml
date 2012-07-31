@@ -1,4 +1,6 @@
 --- 
 open_files: 
-  - Gemfile
-  - README.rdoc
+  - spec/requests/user_logins_spec.rb
+  - app/models/user.rb
+  - spec/models/card_spec.rb
+  - app/controllers/game_controller.rb

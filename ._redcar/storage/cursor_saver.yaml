@@ -29,9 +29,6 @@ cursor_positions:
   - :path: app/helpers/sessions_helper.rb
     :cursor_offset: 455
     :timestamp: 2012-07-20 19:35:41.218000 +12:00
-  - :path: spec/models/card_spec.rb
-    :cursor_offset: 416
-    :timestamp: 2012-07-22 22:13:44.001000 +12:00
   - :path: app/assets/stylesheets/sessions.css.scss
     :cursor_offset: 0
     :timestamp: 2012-07-20 18:31:43.598000 +12:00
@@ -63,9 +60,6 @@ cursor_positions:
     :timestamp: 2012-07-20 16:33:04.916000 +12:00
     :selection_offset: 173
     :block_selection_mode: false
-  - :path: app/controllers/game_controller.rb
-    :cursor_offset: 1012
-    :timestamp: 2012-07-23 22:41:25.690000 +12:00
   - :path: app/models/card.rb
     :cursor_offset: 520
     :timestamp: 2012-07-23 14:02:48.036000 +12:00
@@ -92,4 +86,18 @@ cursor_positions:
   - :path: app/models/hand.rb
     :cursor_offset: 703
     :timestamp: 2012-07-23 14:03:12.491000 +12:00
+  - :path: spec/requests/user_logins_spec.rb
+    :cursor_offset: 333
+    :timestamp: 2012-07-21 13:36:57.022000 +12:00
+  - :path: app/models/user.rb
+    :cursor_offset: 365
+    :timestamp: 2012-07-20 00:23:38.275000 +12:00
+  - :path: spec/models/card_spec.rb
+    :cursor_offset: 600
+    :timestamp: 2012-07-24 14:33:49.733000 +12:00
+    :selection_offset: 563
+    :block_selection_mode: false
+  - :path: app/controllers/game_controller.rb
+    :cursor_offset: 1286
+    :timestamp: 2012-07-23 22:41:25.690000 +12:00
 files_to_retain: 0

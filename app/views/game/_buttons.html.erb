@@ -1,0 +1,27 @@
+<% if (session[:gamestate] == "Third") %>
+<center>
+<table>
+  <tr><td>
+    <%= button_to "HIT", { :controller => 'game', :action => 'hit' }, :remote => true, :class => 'btn btn-large btn-primary' %>
+  </td><td>&nbsp</td><td>
+    <%= button_to "STAY", { :controller => 'game', :action => 'stay' }, :remote => true, :class => 'btn btn-large btn-primary' %>
+  </td></tr>
+</table>
+</center>
+<% elsif (session[:gamestate] == "Dealt") %>
+<center>
+<table>
+  <tr><td>
+    <%= button_to "HIT", { :controller => 'game', :action => 'hit' }, :remote => true, :class => 'btn btn-large btn-primary' %>
+  </td><td>&nbsp</td><td>
+    <%= button_to "DOUBLE", { :controller => 'game', :action => 'double' }, :remote => true, :class => 'btn btn-large btn-primary' %>
+  </td>
+  <td>&nbsp</td><td>
+    <%= button_to "STAY", { :controller => 'game', :action => 'stay' }, :remote => true, :class => 'btn btn-large btn-primary' %>
+  </td>
+  </tr>
+</table>
+</center>
+<% else %>
+<%= button_to "DEAL", { :controller => 'game', :action => 'deal' }, :remote => true, :class => 'btn btn-large btn-primary' %> 
+<% end %>

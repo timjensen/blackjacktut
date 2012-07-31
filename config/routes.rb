@@ -6,6 +6,9 @@ BlackJack::Application.routes.draw do
   match '/login', to: 'sessions#new'
   match "/blackjack", to: 'game#index'
   post 'game/deal'
+  post 'game/hit'
+  post 'game/stay'
+  post 'game/double'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

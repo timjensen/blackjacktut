@@ -8,6 +8,8 @@ class GameController < ApplicationController
   def deal
     # Check if player has enough money in there bankroll
     if got_the_dollars?
+      
+      session[:gamestate] = "Dealt"
       # Deducted wager from bankroll as soon as deal
       deduction
       # Shuffle deck
@@ -30,24 +32,38 @@ class GameController < ApplicationController
       # Check players hand for blackjack
       check_for_bj
     else
-      flash.now[:error] = 'Your Broke Fool'
+      flash.now[:error] = "You're Broke Fool"
   end
+end
+def hit
+    # Produces next card and adds it to players hand
+    next_card
+    # Set third (removes double button)
+    session[:gamestate] = "Third"
+    # Check player has not gone bust
+    check_if_bust
+end
+
+def stay
+end
+
+def double
 end
   
   private
   
   def got_the_dollars?
-    bank = current_user.bankroll.to_f
+    bank = session[:user].bankroll.to_f
     want = session[:bet].to_f
     bank >= want
   end
   
   def deduction
     bet = session[:bet].to_f
-    dollars = current_user.bankroll.to_f
+    dollars = session[:user].bankroll.to_f
     dollars -= bet
-    current_user.bankroll = dollars
-    current_user.save
+    session[:user].bankroll = dollars
+    session[:user].save
   end
   
   def check_for_bj
@@ -56,16 +72,39 @@ end
       # Set bet variable using session
       bet = session[:bet].to_f
       # Set dollars variable using users bankroll
-      dollars = current_user.bankroll.to_f
+      dollars = session[:user].bankroll.to_f
       # Set result variables 
-      flash[:success] = "Congratulations You Hit BlackJack!!"
+      flash.now[:success] = "Congratulations You Hit BlackJack!!"
+      
+      session[:gamestate] = "Over"
       # Sets chippy variable to unlock betting
       dollars += (bet * 3.5)
       # Update users rank roll
-      current_user.bankroll = dollars
+      session[:user].bankroll = dollars
       # Save updated user
-      current_user.save
+      session[:user].save
     end
+  end
+  
+   def next_card
+     # Set hand variable using session variable
+    hand = session[:player_hand]
+    # Create new card
+    @card = Card.new
+    # Add new card to players hand
+    hand.cards << @card
+    # Calculate players new hand score
+    hand.score = Hand.score_of(hand)
+    # Update session variable to updated hand
+    session[:player_hand] = hand
+  end
+  
+  def check_if_bust
+    if (session[:player_hand].score > 21)
+    # Set variables
+    flash.now[:error] = "You Have Gone Bust"
+    session[:gamestate] = "Over"
+  end
   end
   
 end
